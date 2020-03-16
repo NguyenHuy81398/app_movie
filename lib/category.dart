@@ -1,4 +1,5 @@
 
+import 'package:app_movie/itemcategory.dart';
 import 'package:app_movie/model.dart';
 import 'package:flutter/material.dart';
 
@@ -22,26 +23,33 @@ class _CategoryPageState extends State<CategoryPage> {
       body: ListView.builder(
           itemCount: widget.categories.length,
           itemBuilder: (context, index){
-            return Container(
-              height: screen.height / 4,
-              decoration: BoxDecoration(
-                  image: DecorationImage(image: NetworkImage(widget.categories[index].thumb), fit: BoxFit.cover)
-              ),
+            return GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return Item_Category(category: widget.categories[index]);
+                }));
+              },
               child: Container(
-                  decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                          colors: const [
-                            Colors.black,
-                            Colors.black12
-                          ],
-                          begin: Alignment.bottomCenter,
-                          end: Alignment(0.0, 0.0)
-                      )
-                  ),
+                height: screen.height / 4,
+                decoration: BoxDecoration(
+                    image: DecorationImage(image: NetworkImage(widget.categories[index].thumb), fit: BoxFit.cover)
+                ),
+                child: Container(
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            colors: const [
+                              Colors.black,
+                              Colors.black12
+                            ],
+                            begin: Alignment.bottomCenter,
+                            end: Alignment(0.0, 0.0)
+                        )
+                    ),
 
-                  padding: const EdgeInsets.only(left: 10.0, top: 120.0),
+                    padding: const EdgeInsets.only(left: 10.0, top: 120.0),
 
-                  child: Text(widget.categories[index].title, style: TextStyle(fontSize: 20, color: Colors.amberAccent, fontStyle: FontStyle.normal),)),
+                    child: Text(widget.categories[index].title, style: TextStyle(fontSize: 20, color: Colors.amberAccent, fontStyle: FontStyle.normal),)),
+              ),
             );
           }),
     );

@@ -4,7 +4,6 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
-
 import 'model.dart';
 
 class Item_Category extends StatelessWidget{
@@ -14,7 +13,6 @@ class Item_Category extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     final screen = MediaQuery.of(context).size;
-    // TODO: implement build
     return MaterialApp(
       title: "Item Category",
       home: Scaffold(
@@ -42,7 +40,6 @@ class Item_Category extends StatelessWidget{
                           end: Alignment(0.0, 0.0)
                       )
                   ),
-
                   padding: const EdgeInsets.only(left: 10.0, top: 100.0),
                   child: Text(category.title, style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold, color: Colors.amberAccent),)
               ),
@@ -77,7 +74,6 @@ class _IC_HomePageState extends State<IC_HomePage>{
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return FutureBuilder(
       future: fetchItemCategories(http.Client()),
       builder: (context, snapshot){

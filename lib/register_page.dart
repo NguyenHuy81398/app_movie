@@ -11,13 +11,17 @@ class _RegisterPageState extends State<RegisterPage> {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       backgroundColor: Colors.black,
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        elevation: 0.0,
+      ),
       body: Container(
         child: Center(
           child: Container(
             child: Column(
               children: <Widget>[
                 Container(
-                  margin: const EdgeInsets.only(top: 50.0),
+
                   child: Center(
                     child: Text("NDH", style: TextStyle(fontSize: 40, fontFamily: "BlackOpsOne-Regular", color: Colors.amberAccent),),
                   ),
@@ -26,7 +30,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 Container(
                   width: 310.0,
                   height: 412.0,
-                  margin: const EdgeInsets.only(top: 20.0),
+                  margin: const EdgeInsets.only(top: 10.0),
                   padding: const EdgeInsets.only(
                       top: 5.0, bottom: 5.0, left: 18.0, right: 18.0),
                   decoration: BoxDecoration(
@@ -39,7 +43,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       Container(
                         margin: const EdgeInsets.only(top: 5.0, left: 5.0),
                         child: Text(
-                          "Register",
+                          "Đăng ký",
                           style: TextStyle(
                               fontSize: 24.0,
                               fontWeight: FontWeight.w900,
@@ -74,13 +78,13 @@ class _RegisterPageState extends State<RegisterPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
-                              "Password",
+                              "Mật khẩu",
                               style: TextStyle(
                                   fontSize: 13.0, fontWeight: FontWeight.bold),
                             ),
                             TextField(
                               decoration: InputDecoration(
-                                hintText: "Password",
+                                hintText: "Mật khẩu",
                                 hintStyle: TextStyle(fontSize: 9.0),
                               ),
                               keyboardType: TextInputType.visiblePassword,
@@ -96,13 +100,13 @@ class _RegisterPageState extends State<RegisterPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
-                              "Fullname",
+                              "Họ và tên",
                               style: TextStyle(
                                   fontSize: 13.0, fontWeight: FontWeight.bold),
                             ),
                             TextField(
                               decoration: InputDecoration(
-                                hintText: "Fullname",
+                                hintText: "Họ và tên",
                                 hintStyle: TextStyle(fontSize: 9.0),
                               ),
                               keyboardType: TextInputType.text,
@@ -118,13 +122,13 @@ class _RegisterPageState extends State<RegisterPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
-                              "Phonenumber",
+                              "Số điện thoại",
                               style: TextStyle(
                                   fontSize: 13.0, fontWeight: FontWeight.bold),
                             ),
                             TextField(
                               decoration: InputDecoration(
-                                hintText: "Phonenumber",
+                                hintText: "Số điện thoại",
                                 hintStyle: TextStyle(fontSize: 9.0),
                               ),
                               keyboardType: TextInputType.phone,
@@ -148,24 +152,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       children: <Widget>[
                         Expanded(
                           flex: 6,
-                          child: Container(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: <Widget>[
-                                  Radio(
-                                    value: false,
-                                    onChanged: null,
-                                    activeColor: Colors.white,
-                                  ),
-                                  Text(
-                                    "Remember me",
-                                    style: TextStyle(
-                                        fontSize: 12.0,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.white),
-                                  )
-                                ],
-                              )),
+                          child: Container(),
                         ),
                         Expanded(
                           flex: 4,
@@ -178,15 +165,15 @@ class _RegisterPageState extends State<RegisterPage> {
                                 padding: const EdgeInsets.all(10.0),
                                 decoration: BoxDecoration(
                                     gradient: LinearGradient(
-                                      colors: [Color(0xfff), Color(0xff64B6FF)],
+                                      colors: [Color(0xfffff9c4), Color(0xffffd740)],
                                     ),
                                     borderRadius: BorderRadius.circular(5.0)),
                                 child: Text(
-                                  "REGISTER",
+                                  "ĐĂNG KÝ",
                                   style: TextStyle(
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.white),
+                                      color: Colors.black),
                                   textAlign: TextAlign.center,
                                 ),
                               ),

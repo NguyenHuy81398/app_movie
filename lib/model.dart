@@ -29,3 +29,10 @@ class Category{
     );
   }
 }
+
+class Chat{
+  final String name;
+  final String message;
+
+  Chat({this.name, this.message});
+}

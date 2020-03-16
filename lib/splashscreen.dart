@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:app_movie/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -12,18 +11,16 @@ class _SplashScreenState extends State<SplashScreenPage>{
 
   @override
   void initState() {
-    // TODO: implement initState
-    Timer(Duration(seconds: 5), navigationPage);
+    Timer(Duration(seconds: 3), navigationPage);
     super.initState();
   }
 
   void navigationPage(){
-    Navigator.of(context).pushReplacementNamed('/HomePage');
+    Navigator.of(context).pushReplacementNamed('/PageHome');
   }
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(

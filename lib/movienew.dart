@@ -94,7 +94,6 @@ class MovieNewList extends StatelessWidget {
                             offset: Offset(0.2, 1.0),
                             blurRadius: 2,
                             color: Colors.amberAccent
-
                         )
                       ]
                   ),

@@ -17,13 +17,20 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MaterialApp(
       title: "Json",
       home: SplashScreenPage(),
       routes: <String, WidgetBuilder>{
-        '/HomePage':(BuildContext context)=> HomePage()
+        '/PageHome':(BuildContext context)=> PageHome()
       },
+    );
+  }
+}
+class PageHome extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: HomePage(),
     );
   }
 }
@@ -50,7 +57,6 @@ class _HomePageState extends State<HomePage>{
 
     GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
-    // TODO: implement build
     return Scaffold(
       key: _scaffoldKey,
         appBar: AppBar(
@@ -142,7 +148,6 @@ class _HomePageState extends State<HomePage>{
                     },
                   ),
               ),
-
 
               CategoryHome(),
               MovieNew()
